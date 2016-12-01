@@ -1,13 +1,12 @@
 ---
 title: "mid-term"
 author: "neko"
-date: "2016¦~11¤ë24¤é"
+date: "2016å¹´11æœˆ24æ—¥"
 output: html_document
 ---
-<br/>
-<br/>
 
-#### 1. ½ĞÀH¾÷²£¥Í 10000 ²Õ¥¿¾ã¼ÆÀx¦s¦¨ vector ®æ¦¡¡A¨Ã¿é¥X¦¨ random10k.csv (5%)
+
+#### 1. è«‹éš¨æ©Ÿç”¢ç”Ÿ 10000 çµ„æ­£æ•´æ•¸å„²å­˜æˆ vector æ ¼å¼ï¼Œä¸¦è¼¸å‡ºæˆ random10k.csv (5%)
 
 ```
 x <- sample(10000)
@@ -15,9 +14,8 @@ x
 write(x, "C:/Users/user/Desktop/random10k.csv", 18, sep = ",")
 
 ```
-<br/>
 
-#### 2. ½Ğ¨Ï¥Î for °j°é¦C¥X 15 ­Ó¶O¥¬¯Ç¦è(Fibonacci)¼Æ¦C (10%)
+#### 2. è«‹ä½¿ç”¨ for è¿´åœˆåˆ—å‡º 15 å€‹è²»å¸ƒç´è¥¿(Fibonacci)æ•¸åˆ— (10%)
 ```
 fib <- numeric()
 fib[1] <- 0
@@ -30,19 +28,16 @@ for (x in c(3:15)) {
 fib
 
 ```
-<br/>
 
-#### 3. ½Ğ±N sample_data.txt ¿é¤J¶i R ¤º¡A¨Ã§¹¦¨¥H¤U­pºâ (55%)
-<br/>
+#### 3. è«‹å°‡ sample_data.txt è¼¸å…¥é€² R å…§ï¼Œä¸¦å®Œæˆä»¥ä¸‹è¨ˆç®— (55%)
 
 ```
 test <- read.table(file = "C:/Users/user/Desktop/sample_data.txt", header = T, sep = ",", na.strings = c("-9996", "-9997", "-9999"))
 test
 
 ```
-<br/>
 
-#### (a) ±N yyyymmddhh Âà¦¨ POSIXct ®É¶¡ÂW°O®æ¦¡¡A¨Ã·s¼W¬°¤@­ÓÄæ(variable)¡A©R¦W¬° timestamp¡C¨Ã±N¦¹ sample data ¿é¥X¬° sample_data_parsed.csv (¥H³r¸¹¤À¹j¡A¨ã¦³Äæ¦ì¦WºÙ)
+#### (a) å°‡ yyyymmddhh è½‰æˆ POSIXct æ™‚é–“æˆ³è¨˜æ ¼å¼ï¼Œä¸¦æ–°å¢ç‚ºä¸€å€‹æ¬„(variable)ï¼Œå‘½åç‚º timestampã€‚ä¸¦å°‡æ­¤ sample data è¼¸å‡ºç‚º sample_data_parsed.csv (ä»¥é€—è™Ÿåˆ†éš”ï¼Œå…·æœ‰æ¬„ä½åç¨±)
 ```
 library(data.table)
 
@@ -54,9 +49,7 @@ write.table(test, file = "sample_data_parsed.csv", sep = ",", row.names = TRUE, 
 head(test)
 
 ```
-<br/>
-
-#### (b) ½Ğ­pºâ 2014 ¦~¦Ü 2015 ¦~³o­Ó´ú¯¸ªº¨C¤ë¥­§¡®ğ·Å¡B¨C¤ë¥­§¡Àã«×¡B¨C¤ë²Ö¿n­°¤ô¡A ¨Ã¥Îªí®æ§e²{¡Cªí®æ½d¨Ò¦p¤U¡G
+#### (b) è«‹è¨ˆç®— 2014 å¹´è‡³ 2015 å¹´é€™å€‹æ¸¬ç«™çš„æ¯æœˆå¹³å‡æ°£æº«ã€æ¯æœˆå¹³å‡æ¿•åº¦ã€æ¯æœˆç´¯ç©é™æ°´ï¼Œ ä¸¦ç”¨è¡¨æ ¼å‘ˆç¾ã€‚è¡¨æ ¼ç¯„ä¾‹å¦‚ä¸‹ï¼š
 
 
 
