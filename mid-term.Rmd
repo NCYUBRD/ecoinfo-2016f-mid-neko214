@@ -1,0 +1,63 @@
+---
+title: "mid-term"
+author: "neko"
+date: "2016年11月24日"
+output: html_document
+---
+<br/>
+<br/>
+
+#### 1. 請隨機產生 10000 組正整數儲存成 vector 格式，並輸出成 random10k.csv (5%)
+
+```
+x <- sample(10000)
+x
+write(x, "C:/Users/user/Desktop/random10k.csv", 18, sep = ",")
+
+```
+<br/>
+
+#### 2. 請使用 for 迴圈列出 15 個費布納西(Fibonacci)數列 (10%)
+```
+fib <- numeric()
+fib[1] <- 0
+fib[2] <- 1
+
+
+for (x in c(3:15)) {
+  fib[x] = fib[x-1] + fib[x-2] 
+}
+fib
+
+```
+<br/>
+
+#### 3. 請將 sample_data.txt 輸入進 R 內，並完成以下計算 (55%)
+<br/>
+
+```
+test <- read.table(file = "C:/Users/user/Desktop/sample_data.txt", header = T, sep = ",", na.strings = c("-9996", "-9997", "-9999"))
+test
+
+```
+<br/>
+
+#### (a) 將 yyyymmddhh 轉成 POSIXct 時間戳記格式，並新增為一個欄(variable)，命名為 timestamp。並將此 sample data 輸出為 sample_data_parsed.csv (以逗號分隔，具有欄位名稱)
+```
+library(data.table)
+
+test$yyyymmddhh <- test$yyyymmddhh-1
+test[, timestamp:=as.POSIXct(strptime(yyyymmddhh, '%y%m%d%h'))]
+
+
+write.table(test, file = "sample_data_parsed.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+head(test)
+
+```
+<br/>
+
+#### (b) 請計算 2014 年至 2015 年這個測站的每月平均氣溫、每月平均濕度、每月累積降水， 並用表格呈現。表格範例如下：
+
+
+
+
